@@ -67,3 +67,31 @@ To change the file permission we use the **chmod** command. There are two method
 >Answer: **chmod 730 DD DD1**
 
 ***
+
+# Compressing a file in Linux 
+
+1. **tar** - This command is used to compress the files in the linux. The structure goes like **tar cvf tar_file_name.tar file1 file2**. Here c stands for create, v is to see the output of whats happening and f stands for specifying the files.
+
+- Lets say you have two files named file1, file2 and you have to compress it using the command tar in a file named cmp. To do this command would be. Sample -> **tar cvf cmp.tar file1 file2**
+
+- To list the content of the tar file run the command - **tar tf file_name.tar**
+
+- to extract the tar file use the command - **tar xf file_name.tar**. Here x stands for the extract. You can see the man page of tar to see the different compression methods available. If you dont remember it just use the flag 2 along with cvf and it will decide the compression method based on the file name. Sample - **tar cvfa cmp1.tar.gz file1 file2**
+
+***
+
+> ## Questions on Compression, redirection and File Permission
+>
+>1. The user owner should have all the permission the directory "dir"
+>
+>  Answer: **chmod u+rwx DIR**
+> 
+> 2. create a compressed archived of /etc directory and name it as /root/com.gz
+>
+> Answer: **tar cvfa /root/com.gz /root**
+> 
+> 3. copy the lines containing the word "root" in /etc/passwd and copy them into the file /mint/pass
+>
+>  Answer: **grep "root" /etc/passwd >> /mnt/pass**
+
+***
