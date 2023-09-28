@@ -36,6 +36,8 @@
 
 8.  **>,>>** - Redirection is used to to send the output of some command to another file. When you will use single **>** its gonna remove all the content of the file (if any) and insert the output of the commad you entered. Meanwhile if you gonna  use **>>**  its gonna append the content of the command to the file you mentioned in the command and keep the content as it is. To test this make two files through command you learnt earlier name them as 1.txt and 2.txt enter some content in them then run both sameple command.Sample -> **ls > 1.txt** , **ls >> 2.txt**. In case of first command you will have all the entry of ls command in the file 1.txt only the content that you entered earlier wont be there. Now when you gonna see the file 2.txt it will have the content that you entered plus the output of the ls command. In case you want to redirct the error output you need to use 2 infront of >.Other concept remains the same if you want to append use double >> and if u want to remove everything and input use single >. Sample -> **ls ab 2>> 1.txt**
 
+***
+
 # Changing the permission of the files and directory 
 
 To change the file permission we use the **chmod** command. There are two method through which you can use the chmod command through which you can grant the permission to the files and directories.
@@ -44,9 +46,24 @@ To change the file permission we use the **chmod** command. There are two method
 - To check what permission a file currently has run the command **ls -l File_name** the first one would be user,second is for groups and third is for others. Now I did the same for the file 1.txt and i noticed that the user dont have execute(x) permission now to grant that I will run the sample command. Sample -> **chmod u+x 1.txt**
 - In the similar way if you want to remove any permission use (-) sign. To grant a permission to all 3 you can use 'a' instead
 
+***
+
 >### Question on Relative Method
 >Write the Command to grant the execute permission to all on file F1
 >
->Answer: **chmod a+x F1**
+>Answer: **chmod a+x F1** or **chmod ugo+x F1**
 
-2. 
+***
+
+2. **Absolute Method**- In this method each permission read, write, excute are giving a number i.e read(4), write(2), execute(1). Suppose you want to give only read permission you will write 4, read+write 6, write+execute 3.
+- Lets understand it with an example suppose you have a file lets say file1.txt now you want to give the user - rwx(7) , group - rw(6), others - w(c). Command to do this would be **chmod 762 file1.txt**
+
+***
+
+>### Question on Absoulte Method
+>
+>Write the command to assign the follwing permission on the directory DD and DD1 using chmod only once. rwx to all user, wx for the group, none for the others
+>
+>Answer: **chmod 730 DD DD1**
+
+***
