@@ -36,6 +36,10 @@
 
 8.  **>,>>** - Redirection is used to to send the output of some command to another file. When you will use single **>** its gonna remove all the content of the file (if any) and insert the output of the commad you entered. Meanwhile if you gonna  use **>>**  its gonna append the content of the command to the file you mentioned in the command and keep the content as it is. To test this make two files through command you learnt earlier name them as 1.txt and 2.txt enter some content in them then run both sameple command.Sample -> **ls > 1.txt** , **ls >> 2.txt**. In case of first command you will have all the entry of ls command in the file 1.txt only the content that you entered earlier wont be there. Now when you gonna see the file 2.txt it will have the content that you entered plus the output of the ls command. In case you want to redirct the error output you need to use 2 infront of >.Other concept remains the same if you want to append use double >> and if u want to remove everything and input use single >. Sample -> **ls ab 2>> 1.txt**
 
+9. **systemctl** - this command is being to manage the running service in the system. different option you can use with this command are
+
+- **systemctl enable/disable/start/stop/status SERVICE_NAME**
+    
 ***
 
 # Changing the permission of the files and directory 
@@ -93,5 +97,28 @@ To change the file permission we use the **chmod** command. There are two method
 > 3. copy the lines containing the word "root" in /etc/passwd and copy them into the file /mint/pass
 >
 >  Answer: **grep "root" /etc/passwd >> /mnt/pass**
+
+***
+
+# Tuning a profile in Linux
+
+1. Step one would to run the command **yum install tuned**. After installing the tuned we can now run different commands of tuned
+2. **tuned-adm list** - This will list all the available profile. At the bottom you can see the current active profile as well 
+3. **tuned-adm active** - This will list the current active profile
+4. **tuned-adm profile profile_name** - this will change the current active profile to the one u selected
+5. **tuned-adm recommend** - this will suggest you the recommeded profile for the system
+
+***
+
+# NTP (Network Time Protocol)
+
+NTP - It stands for network time protocol. It helps you to sync your system with any time server. NTP will use the **chrony** service and **chronyd** daemon. Steps to setup NTP in your system are as follows 
+
+1. **yum install chrony**
+2. **nano /etc/chrony.conf**
+3. After this you need to comment out the lines which are sync the time then add the line **server <ip_address> iburst** and save the file and exist.
+4. Since we have changed the configuration file we need to restart the chronyd daemon with the command **systemctl restart chronyd**
+5. then you need to enter the command **chronyc sources -v**
+6. then run the **timedate** command and check if the NTP value is set to active or not. If not run the command **timedate set-ntp true**
 
 ***
