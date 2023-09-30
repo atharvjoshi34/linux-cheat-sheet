@@ -12,4 +12,4 @@ For RHCSA exam they will give you the the URL for which you need to configure th
 >
 >enabled = 1
 
-#### Note - The package manager for Centos is yum. If you want to install any package you need to write yum install package_name. Package manager is different for different OS. While running yum install mke sure either you are installing the package as a root user or you have sudo permission enabled on your account.
+#### Note - The package manager for Centos is yum. If you want to install any package you need to write yum install package_name. Package manager is different for different OS. While running yum install make sure either you are installing the package as a root user or you have sudo permission enabled on your account.
