@@ -36,6 +36,8 @@
 
 8.  **>,>>** - Redirection is used to to send the output of some command to another file. When you will use single **>** its gonna remove all the content of the file (if any) and insert the output of the commad you entered. Meanwhile if you gonna  use **>>**  its gonna append the content of the command to the file you mentioned in the command and keep the content as it is. To test this make two files through command you learnt earlier name them as 1.txt and 2.txt enter some content in them then run both sameple command.Sample -> **ls > 1.txt** , **ls >> 2.txt**. In case of first command you will have all the entry of ls command in the file 1.txt only the content that you entered earlier wont be there. Now when you gonna see the file 2.txt it will have the content that you entered plus the output of the ls command. In case you want to redirct the error output you need to use 2 infront of >.Other concept remains the same if you want to append use double >> and if u want to remove everything and input use single >. Sample -> **ls ab 2>> 1.txt**
 
+***
+
 9. **systemctl** - this command is being to manage the running service in the system. different option you can use with this command are
 
 - **systemctl enable/disable/start/stop/status SERVICE_NAME**
