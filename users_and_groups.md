@@ -23,3 +23,16 @@ When you will open the above file you will see the details in the following form
 - **::** - The fifth field is comment which is currently empty in our case
 - **/home/u1** - the sixth field is the user home directory
 - **/bin/bash** - The seventh and the last field is shell name the use can access
+
+# Managing Groups in Linux 
+
+1. **groupadd ** - This command will create the new group in the system. Sample -> groupadd g1
+
+#### Details of group are located in the file /etc/group 
+
+When you will open the above file you will see the the deatils in the following format **g1:x:1003:** [ man 5 group]
+
+- The first field is for name
+- The second field is for password
+- The third one is for group id
+- The fourth one is list of all the user for which this is the suplimentry group 
