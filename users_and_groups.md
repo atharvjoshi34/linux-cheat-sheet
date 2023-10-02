@@ -27,6 +27,10 @@ When you will open the above file you will see the details in the following form
 # Managing Groups in Linux 
 
 1. **groupadd ** - This command will create the new group in the system. Sample -> groupadd g1
+2. **-g** - to add a groupid of your choice use -g flag
+3. **You can override some values related to the group in the file /etc/login.defs**
+4. **-o** - You can use this flag to attach the same gid to the new group
+5. **groupdel** - this will delete the group 
 
 #### Details of group are located in the file /etc/group 
 
