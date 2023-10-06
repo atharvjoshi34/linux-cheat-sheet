@@ -55,6 +55,15 @@
 - **e** - to search for multiple patterns. This is going to OR search it will give the line in which either the pattern you mentioned is present. For every pattern u need to mentioned the flag e . Suppose there are three pattern for which u want to do the search then u need to mention e three times
 
 ***
+
+11. **passwd** - This command is used to change the password of the user.
+- **d** - this is used to delete the password of a user. Sample -> **passwd -d USERNAME**
+- **l** - this is to lock someone and to unlock use the flag -u
+- **e** - use this option to force someone to change their password
+- **n** - the minimum number of days a user has to wait until the password can be changed again
+
+***
+
 # Changing the permission of the files and directory 
 
 To change the file permission we use the **chmod** command. There are two method through which you can use the chmod command through which you can grant the permission to the files and directories.
