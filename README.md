@@ -41,9 +41,20 @@
 9. **systemctl** - this command is being to manage the running service in the system. different option you can use with this command are
 
 - **systemctl enable/disable/start/stop/status SERVICE_NAME**
-    
+
 ***
 
+10. **grep** - This command is used to find a pattern or words in the files. Syntax: $grep [options] PATTERN file. By default grep looks for pattern and not words.
+    
+- **w** - Use this flag to find the word that you mentioned rather than the pattern. Sample -> **grep -w "in" f1.txt** This will search for the word in rather than the pattern in.
+- **n** - use this command to append the number of the line on which the pattern is peresent. Sample -> **greo -n f1.txt**
+- **c** - Use this to get the count of number of lines containing the pattern.
+- **i** - To ignore the case sensitivity
+- **v** - To  print the line not containing the pattern
+- **l** - tell you the file name in which the pattern is present
+- **e** - to search for multiple patterns. This is going to OR search it will give the line in which either the pattern you mentioned is present. For every pattern u need to mentioned the flag e . Suppose there are three pattern for which u want to do the search then u need to mention e three times
+
+***
 # Changing the permission of the files and directory 
 
 To change the file permission we use the **chmod** command. There are two method through which you can use the chmod command through which you can grant the permission to the files and directories.
